@@ -90,7 +90,9 @@ h2 {
 }
 
 .card {
-    width: 100px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 100px;
     height: 100px;
     background-color: #ccc;
     border-radius: 10px;
@@ -154,4 +156,19 @@ h2 {
     animation: pop 1.5s ease-out forwards;
     top: 50%;
     left: 50%;
+}
+@media (max-width: 600px) {
+  .content-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+    height: auto;
+  }
+
+  .theme button {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
 }
