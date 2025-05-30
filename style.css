@@ -85,8 +85,6 @@ h2 {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-
-
 }
 
 .card {
@@ -100,7 +98,8 @@ h2 {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease;
-
+    aspect-ratio: 1 / 1;
+    max-width: 100px;
 }
 
 .card .front,
@@ -157,18 +156,28 @@ h2 {
     top: 50%;
     left: 50%;
 }
+
 @media (max-width: 600px) {
-  .content-container {
-    padding: 20px;
-  }
+    h1 {
+        font-size: 36px;
+        height: auto;
+    }
 
-  h1 {
-    font-size: 36px;
-    height: auto;
-  }
+    .content-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
 
-  .theme button {
-    padding: 10px 15px;
-    font-size: 16px;
-  }
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        gap: 10px;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+        max-width: 80px;
+    }
 }
